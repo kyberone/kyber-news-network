@@ -45,43 +45,79 @@
     </header>
 
     <main>
-        <section class="hero-story">
-            <div class="hero-image" id="hero-img">
-                <div class="hero-content">
-                    <span class="category">POLITICS</span>
-                    <h1>The New Republic: A New Era or Old Problems?</h1>
-                    <p>As the Senate settles on Coruscant, questions remain about the effectiveness of the decentralized defense initiative. Chancellor Mon Mothma's vision faces its toughest challenge yet.</p>
-                    <button class="read-more">READ FULL TRANSMISSION</button>
+        <div class="main-content">
+            <section class="hero-story">
+                <div class="hero-image" id="hero-img">
+                    <div class="hero-content">
+                        <span class="category">POLITICS</span>
+                        <h1>The New Republic: A New Era or Old Problems?</h1>
+                        <p>As the Senate settles on Coruscant, questions remain about the effectiveness of the decentralized defense initiative. Chancellor Mon Mothma's vision faces its toughest challenge yet.</p>
+                        <button class="read-more">READ FULL TRANSMISSION</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="news-grid">
-            <article class="news-card">
-                <div class="card-img" id="thumb-1"></div>
-                <div class="card-content">
-                    <span class="category">OUTER RIM</span>
-                    <h3>Nevarro: From Pirate Hub to Trade Port</h3>
-                    <p>High Magistrate Greef Karga's transformation of the former bounty hunter haven continues to defy expectations.</p>
+            <section class="featured-section">
+                <h2 class="section-title">LATEST TRANSMISSIONS</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="card-img" id="thumb-1"></div>
+                        <div class="card-content">
+                            <span class="category">OUTER RIM</span>
+                            <h3>Nevarro: From Pirate Hub to Trade Port</h3>
+                            <p>High Magistrate Greef Karga's transformation of the former bounty hunter haven continues to defy expectations.</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="card-img" id="thumb-2"></div>
+                        <div class="card-content">
+                            <span class="category">SCIENCE</span>
+                            <h3>Holonet 2.0: Bridging the Outer Rim</h3>
+                            <p>Kyber One Tech announces a new relay system designed to bring stable communications to the most remote sectors.</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="card-img" id="thumb-3"></div>
+                        <div class="card-content">
+                            <span class="category">UNDERWORLD</span>
+                            <h3>The Shadow of the Syndicate</h3>
+                            <p>A look into the power vacuum left by the collapse of the Hutt Empire and who is stepping in to fill it.</p>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="news-card">
-                <div class="card-img" id="thumb-2"></div>
-                <div class="card-content">
-                    <span class="category">SCIENCE</span>
-                    <h3>Holonet 2.0: Bridging the Outer Rim</h3>
-                    <p>Kyber One Tech announces a new relay system designed to bring stable communications to the most remote sectors.</p>
+            </section>
+
+            <section class="sectors-section">
+                <h2 class="section-title">GALACTIC SECTORS</h2>
+                <div class="sector-grid">
+                    ...
                 </div>
-            </article>
-            <article class="news-card">
-                <div class="card-img" id="thumb-3"></div>
-                <div class="card-content">
-                    <span class="category">UNDERWORLD</span>
-                    <h3>The Shadow of the Syndicate</h3>
-                    <p>A look into the power vacuum left by the collapse of the Hutt Empire and who is stepping in to fill it.</p>
+            </section>
+
+            <section class="live-feeds">
+                <h2 class="section-title">LIVE SURVEILLANCE FEEDS</h2>
+                <div class="feed-container">
+                    <div class="scanner-widget">
+                        <div class="scanner-circle">
+                            <div class="scanner-sweep"></div>
+                            <div class="scanner-blip" style="top: 30%; left: 40%;"></div>
+                            <div class="scanner-blip" style="top: 70%; left: 60%;"></div>
+                        </div>
+                        <div class="scanner-data">
+                            <div class="data-line">SECTOR: 004-B</div>
+                            <div class="data-line">STATUS: SCANNING...</div>
+                            <div class="data-line">THREAT: LOW</div>
+                        </div>
+                    </div>
+                    <div class="feed-display" style="background-image: url('images/nevarro.png'); filter: sepia(1) hue-rotate(90deg) brightness(0.7);">
+                        <div class="feed-overlay">
+                            <span class="rec">REC</span>
+                            <span class="cam">CAM-01: NEVARRO APPROACH</span>
+                        </div>
+                    </div>
                 </div>
-            </article>
-        </section>
+            </section>
+        </div>
 
         <aside class="side-bar">
             <div class="widget">
@@ -90,22 +126,40 @@
                 <div class="market-item"><span>COAXIUM</span> <span class="down">▼ 1.2%</span></div>
                 <div class="market-item"><span>TIBANNA</span> <span class="stable">▬ 0.0%</span></div>
             </div>
+            
             <div class="widget">
                 <h4>WEATHER REPORT</h4>
                 <div class="weather-item"><span>TATOOINE</span> <span class="temp">48°C</span></div>
                 <div class="weather-item"><span>CORUSCANT</span> <span class="temp">22°C</span></div>
                 <div class="weather-item"><span>HOTH</span> <span class="temp">-65°C</span></div>
             </div>
+
             <div class="widget bounty">
                 <h4>MOST WANTED</h4>
                 <div class="bounty-placeholder"></div>
-                <p>REWARD: 50,000 CREDITS</p>
+                <div class="bounty-details">
+                    <p class="bounty-name">UNKNOWN ACCOMPLICE</p>
+                    <p class="bounty-reward">REWARD: 50,000 CREDITS</p>
+                    <p class="bounty-status">STATUS: AT LARGE</p>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h4>UPCOMING EVENTS</h4>
+                <ul class="event-list">
+                    <li>Boonta Eve Classic - 3 Days</li>
+                    <li>Senate Session 402 - Tomorrow</li>
+                    <li>Kessel Run Memorial - Next Week</li>
+                </ul>
             </div>
         </aside>
     </main>
 
     <footer>
         <div class="footer-content">
+            <div class="footer-logo">
+                <span class="kyber">KYBER</span><span class="one">ONE</span>
+            </div>
             <p>&copy; 9 ABY KYBER ONE MEDIA GROUP. ALL RIGHTS RESERVED. TRANSMISSION ENCRYPTED.</p>
             <div class="social-links">
                 <span>HOLONET</span>
