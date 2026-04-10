@@ -104,13 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'PIRATE CAPTAIN VANE',
             reward: '120,000 CREDITS',
             status: 'WANTED FOR RAIDING',
-            img: 'https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?auto=format&fit=crop&q=80&w=400'
+            img: 'images/underworld.png'
         },
         {
             name: 'REMNANT OFFICER ZALE',
             reward: '250,000 CREDITS',
             status: 'WANTED FOR WAR CRIMES',
-            img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400'
+            img: 'images/trandoshan.png'
         }
     ];
 

@@ -614,10 +614,10 @@ footer {
 }
 
 /* Specific background images */
-#hero-img { background-image: url('images/senate.png'); }
+#hero-img { background-image: url('images/hero.png'); }
 #thumb-1 { background-image: url('images/nevarro.png'); }
-#thumb-2 { background-image: url('images/holonet.png'); }
-#thumb-3 { background-image: url('images/syndicate.png'); }
+#thumb-2 { background-image: url('images/holonet_new.png'); }
+#thumb-3 { background-image: url('images/underworld.png'); }
 .bounty-placeholder { background-image: url('images/bounty.png'); background-size: cover; }
 
 @media (max-width: 1100px) {
