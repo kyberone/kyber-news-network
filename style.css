@@ -283,12 +283,12 @@ footer {
     color: var(--accent-color);
 }
 
-/* Specific background images will be added later */
-#hero-img { background-image: url('images/senate.jpg'); }
-#thumb-1 { background-image: url('images/nevarro.jpg'); }
-#thumb-2 { background-image: url('images/holonet.jpg'); }
-#thumb-3 { background-image: url('images/syndicate.jpg'); }
-.bounty-placeholder { background-image: url('images/bounty.jpg'); background-size: cover; }
+/* Specific background images */
+#hero-img { background-image: url('images/senate.png'); }
+#thumb-1 { background-image: url('images/nevarro.png'); }
+#thumb-2 { background-image: url('images/holonet.png'); }
+#thumb-3 { background-image: url('images/syndicate.png'); }
+.bounty-placeholder { background-image: url('images/bounty.png'); background-size: cover; }
 
 @media (max-width: 900px) {
     main { grid-template-columns: 1fr; }
