@@ -39,6 +39,8 @@
                     <span class="ticker-item">NEW REPUBLIC SENATE DEBATES MON CALAMARI SHIPYARD SUBSIDIES...</span>
                     <span class="ticker-item">UNCONFIRMED REPORTS OF JEDI SIGHTINGS ON NEVARRO...</span>
                     <span class="ticker-item">GALACTIC CREDIT EXCHANGE FLUCTUATES...</span>
+                    <span class="ticker-item">BOONTA EVE CLASSIC TICKETS SOLD OUT IN RECORD TIME...</span>
+                    <span class="ticker-item">CORELLIAN SHIPYARDS ANNOUNCE NEW FREIGHTER MODELS...</span>
                 </div>
             </div>
         </div>
@@ -61,7 +63,7 @@
                 <h2 class="section-title">LATEST TRANSMISSIONS</h2>
                 <div class="news-grid">
                     <article class="news-card">
-                        <div class="card-img" id="thumb-1"></div>
+                        <div class="card-img" id="thumb-1" style="background-image: url('images/nevarro.png');"></div>
                         <div class="card-content">
                             <span class="category">OUTER RIM</span>
                             <h3>Nevarro: From Pirate Hub to Trade Port</h3>
@@ -69,7 +71,7 @@
                         </div>
                     </article>
                     <article class="news-card">
-                        <div class="card-img" id="thumb-2"></div>
+                        <div class="card-img" id="thumb-2" style="background-image: url('images/holonet.png');"></div>
                         <div class="card-content">
                             <span class="category">SCIENCE</span>
                             <h3>Holonet 2.0: Bridging the Outer Rim</h3>
@@ -77,11 +79,35 @@
                         </div>
                     </article>
                     <article class="news-card">
-                        <div class="card-img" id="thumb-3"></div>
+                        <div class="card-img" id="thumb-3" style="background-image: url('images/syndicate.png');"></div>
                         <div class="card-content">
                             <span class="category">UNDERWORLD</span>
                             <h3>The Shadow of the Syndicate</h3>
                             <p>A look into the power vacuum left by the collapse of the Hutt Empire and who is stepping in to fill it.</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="card-img" id="thumb-4" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400');"></div>
+                        <div class="card-content">
+                            <span class="category">CORUSCANT</span>
+                            <h3>Senate Square Restoration</h3>
+                            <p>Architects begin the monumental task of repairing the scars left by the Imperial occupation of the former Jedi Temple district.</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="card-img" id="thumb-5" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1614732414444-096e5f1122d5?auto=format&fit=crop&q=80&w=400');"></div>
+                        <div class="card-content">
+                            <span class="category">MARKET</span>
+                            <h3>Credit Stabilization Act Passed</h3>
+                            <p>The New Republic moves to replace the Imperial Credit with a new, gold-backed currency system.</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="card-img" id="thumb-6" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&q=80&w=400');"></div>
+                        <div class="card-content">
+                            <span class="category">SECURITY</span>
+                            <h3>Patrol Fleet Expansion</h3>
+                            <p>Admiral Ackbar requests more Starhawk-class battleships to secure trade routes from remnant incursions.</p>
                         </div>
                     </article>
                 </div>
@@ -90,7 +116,30 @@
             <section class="sectors-section">
                 <h2 class="section-title">GALACTIC SECTORS</h2>
                 <div class="sector-grid">
-                    ...
+                    <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=400');">
+                        <div class="sector-info">
+                            <h3>CORE WORLDS</h3>
+                            <p>Stability and Prosperity</p>
+                        </div>
+                    </div>
+                    <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1464802686167-b939a67e06a1?auto=format&fit=crop&q=80&w=400');">
+                        <div class="sector-info">
+                            <h3>MID RIM</h3>
+                            <p>Industrial Hubs</p>
+                        </div>
+                    </div>
+                    <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bcc0?auto=format&fit=crop&q=80&w=400');">
+                        <div class="sector-info">
+                            <h3>OUTER RIM</h3>
+                            <p>The New Frontier</p>
+                        </div>
+                    </div>
+                    <div class="sector-card" style="background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&q=80&w=400');">
+                        <div class="sector-info">
+                            <h3>UNKNOWN REGIONS</h3>
+                            <p>Uncharted Territory</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -104,16 +153,45 @@
                             <div class="scanner-blip" style="top: 70%; left: 60%;"></div>
                         </div>
                         <div class="scanner-data">
-                            <div class="data-line">SECTOR: 004-B</div>
+                            <div class="data-line">SECTOR: <span id="feed-sector">004-B</span></div>
                             <div class="data-line">STATUS: SCANNING...</div>
-                            <div class="data-line">THREAT: LOW</div>
+                            <div class="data-line">THREAT: <span id="feed-threat">LOW</span></div>
+                        </div>
+                        <div class="cam-selector">
+                            <button class="cam-btn active" data-cam="0">CAM-01</button>
+                            <button class="cam-btn" data-cam="1">CAM-02</button>
+                            <button class="cam-btn" data-cam="2">CAM-03</button>
                         </div>
                     </div>
-                    <div class="feed-display" style="background-image: url('images/nevarro.png'); filter: sepia(1) hue-rotate(90deg) brightness(0.7);">
+                    <div class="feed-display" id="main-feed" style="background-image: url('images/nevarro.png'); filter: sepia(1) hue-rotate(90deg) brightness(0.7);">
                         <div class="feed-overlay">
                             <span class="rec">REC</span>
-                            <span class="cam">CAM-01: NEVARRO APPROACH</span>
+                            <span class="cam" id="cam-label">CAM-01: NEVARRO APPROACH</span>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-section">
+                <h2 class="section-title">TRANSMISSION ARCHIVE</h2>
+                <div class="archive-list">
+                    <div class="archive-item">
+                        <span class="archive-date">9 ABY 02.15</span>
+                        <span class="archive-category">BATTLE</span>
+                        <h3>The Liberation of Coruscant: Two Years Later</h3>
+                        <p>A retrospective on the final stand of the Imperial forces on the capital world.</p>
+                    </div>
+                    <div class="archive-item">
+                        <span class="archive-date">9 ABY 01.10</span>
+                        <span class="archive-category">TREATY</span>
+                        <h3>Chandrila Accords Ratified</h3>
+                        <p>New trade agreements established between the Mid Rim and the New Republic core.</p>
+                    </div>
+                    <div class="archive-item">
+                        <span class="archive-date">8 ABY 11.24</span>
+                        <span class="archive-category">INTEL</span>
+                        <h3>Moff Gideon's Remnant Tracked to Mandalore</h3>
+                        <p>Rumors of a hidden Imperial presence on the devastated homeworld persist.</p>
                     </div>
                 </div>
             </section>
@@ -136,11 +214,17 @@
 
             <div class="widget bounty">
                 <h4>MOST WANTED</h4>
-                <div class="bounty-placeholder"></div>
-                <div class="bounty-details">
-                    <p class="bounty-name">UNKNOWN ACCOMPLICE</p>
-                    <p class="bounty-reward">REWARD: 50,000 CREDITS</p>
-                    <p class="bounty-status">STATUS: AT LARGE</p>
+                <div class="bounty-card">
+                    <div class="bounty-image" id="bounty-img" style="background-image: url('images/bounty.png');"></div>
+                    <div class="bounty-details">
+                        <p class="bounty-name" id="bounty-name">UNKNOWN ACCOMPLICE</p>
+                        <p class="bounty-reward" id="bounty-reward">REWARD: 50,000 CREDITS</p>
+                        <p class="bounty-status" id="bounty-status">STATUS: AT LARGE</p>
+                    </div>
+                </div>
+                <div class="bounty-nav">
+                    <button id="prev-bounty">◀</button>
+                    <button id="next-bounty">▶</button>
                 </div>
             </div>
 

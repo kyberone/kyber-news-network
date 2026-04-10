@@ -336,11 +336,19 @@ main {
 .down { color: #f00; }
 .temp { color: var(--accent-color); font-weight: bold; }
 
-.bounty-placeholder {
-    height: 250px;
+.bounty-card {
+    border: 1px dashed var(--accent-color);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background: rgba(0,0,0,0.3);
+}
+
+.bounty-image {
+    height: 200px;
     background-color: #222;
     margin-bottom: 1rem;
-    border: 1px dashed var(--accent-color);
+    background-size: cover;
+    background-position: center;
 }
 
 .bounty-details {
@@ -351,6 +359,7 @@ main {
     font-family: var(--tech-font);
     font-weight: bold;
     margin-bottom: 5px;
+    color: #fff;
 }
 
 .bounty-reward {
@@ -363,6 +372,25 @@ main {
     font-size: 0.8rem;
     color: #f00;
     margin-top: 5px;
+}
+
+.bounty-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bounty-nav button {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bounty-nav button:hover {
+    background: var(--accent-color);
+    color: #000;
 }
 
 .event-list {
@@ -433,10 +461,35 @@ main {
     font-size: 0.7rem;
     color: var(--accent-color);
     width: 100%;
+    margin-bottom: 1rem;
 }
 
-.data-line {
-    margin-bottom: 5px;
+.cam-selector {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.cam-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    color: var(--accent-color);
+    font-family: var(--tech-font);
+    font-size: 0.6rem;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cam-btn:hover {
+    border-color: var(--accent-color);
+    background: rgba(0, 242, 255, 0.1);
+}
+
+.cam-btn.active {
+    background: var(--accent-color);
+    color: #000;
 }
 
 .feed-display {
@@ -477,6 +530,59 @@ main {
 
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+.archive-section {
+    margin-bottom: 3rem;
+    background: rgba(10, 22, 34, 0.5);
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.archive-item {
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+    padding-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.archive-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.archive-item:hover {
+    padding-left: 10px;
+    border-left: 2px solid var(--accent-color);
+}
+
+.archive-date {
+    font-family: var(--tech-font);
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.archive-category {
+    font-size: 0.7rem;
+    background: rgba(0, 242, 255, 0.1);
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.archive-item h3 {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.archive-item p {
+    font-size: 0.9rem;
+    color: rgba(224, 250, 255, 0.8);
 }
 
 footer {
