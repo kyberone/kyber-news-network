@@ -1,0 +1,297 @@
+:root {
+    --bg-color: #050b14;
+    --accent-color: #00f2ff;
+    --text-color: #e0faff;
+    --header-bg: #0a1622;
+    --card-bg: #0f2133;
+    --neon-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+    --aurabesh-font: 'Rajdhani', sans-serif;
+    --tech-font: 'Orbitron', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--aurabesh-font);
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+header {
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: var(--neon-shadow);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    font-family: var(--tech-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo .kyber { color: #fff; }
+.logo .one { color: var(--accent-color); }
+.logo .news-tag {
+    display: block;
+    font-size: 0.6rem;
+    color: var(--accent-color);
+    margin-top: -5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--accent-color);
+    text-shadow: var(--neon-shadow);
+}
+
+.date-ticker {
+    font-size: 0.9rem;
+    font-family: var(--tech-font);
+}
+
+.breaking-bar {
+    display: flex;
+    background: #c00;
+    height: 30px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.breaking-label {
+    background: #000;
+    color: #fff;
+    padding: 0 1rem;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.ticker-wrap {
+    flex-grow: 1;
+}
+
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 30s linear infinite;
+    color: #fff;
+    font-weight: 500;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.hero-story {
+    grid-column: 1 / 2;
+}
+
+.hero-image {
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    border: 1px solid var(--accent-color);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-content {
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 2rem;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-family: var(--tech-font);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.category {
+    background: var(--accent-color);
+    color: #000;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: var(--tech-font);
+    transition: all 0.3s;
+}
+
+.read-more:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+.news-grid {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.news-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.card-img {
+    height: 150px;
+    background-color: #222;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.side-bar {
+    grid-column: 2 / 3;
+}
+
+.widget {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.widget h4 {
+    font-family: var(--tech-font);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.market-item, .weather-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.up { color: #0f0; }
+.down { color: #f00; }
+.temp { color: var(--accent-color); font-weight: bold; }
+
+.bounty-placeholder {
+    height: 200px;
+    background-color: #222;
+    margin-bottom: 1rem;
+    border: 1px dashed var(--accent-color);
+}
+
+footer {
+    border-top: 1px solid rgba(0, 242, 255, 0.2);
+    padding: 2rem 5%;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: rgba(224, 250, 255, 0.5);
+}
+
+.social-links span {
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.social-links span:hover {
+    color: var(--accent-color);
+}
+
+/* Specific background images will be added later */
+#hero-img { background-image: url('images/senate.jpg'); }
+#thumb-1 { background-image: url('images/nevarro.jpg'); }
+#thumb-2 { background-image: url('images/holonet.jpg'); }
+#thumb-3 { background-image: url('images/syndicate.jpg'); }
+.bounty-placeholder { background-image: url('images/bounty.jpg'); background-size: cover; }
+
+@media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    .hero-story, .news-grid, .side-bar { grid-column: 1 / 2; }
+    .news-grid { grid-template-columns: 1fr 1fr; }
+}
